@@ -115,7 +115,8 @@ int number2 = int.Parse(input);
 // LINQ - Language Integrated Query - operations on collections
 int[] nums = new int[] { 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 // LINQ operates on the IEnumerable<T> interface (or IQueryable<T>)
-// LINQ is "lazy" - subsequent operations do not process data until the received collection is "materialized", e.g. by calling .ToArray()
+// LINQ is "lazy" - subsequent operations do not process data 
+until the received collection is "materialized", e.g. by calling .ToArray()
 // LINQ **does not** modify the original data
 
 // Select - operation (in this case x * 2) on each element of the collection
@@ -140,7 +141,8 @@ int[] nums3 = nums.Take(5).ToArray(); // { 1, 1, 2, 3, 5 }
 int[] nums4 = nums.Skip(3).Take(4).ToArray(); // { 3, 5, 8, 13 }
 
 // Concat - appends another collection
-int[] nums5 = nums.Concat(nums.Reverse()).ToArray(); // { 1, 1, 2, 3, 5, 8, 13, 21, 34, 34, 21, 13, 8, 5, 3, 2, 1, 1 }
+int[] nums5 = nums.Concat(nums.Reverse()).ToArray(); 
+// { 1, 1, 2, 3, 5, 8, 13, 21, 34, 34, 21, 13, 8, 5, 3, 2, 1, 1 }
 
 // All/Any - checks whether all/any element meets the condition
 bool allEven = nums.All(x => x % 2 == 0); // false
@@ -198,9 +200,12 @@ struct MacAddress
 
 
 <h1 id="HTML&CSS">HTML & CSS</h1>
+<h3>Coming to github soon</h3>
 
 <h1 id="CORE">ASP.NET Core</h1>
+<h3>Coming to github soon</h3>
 
 <h1 id="BLAZOR">Blazor</h1>
+<h3>Coming to github soon</h3>
 
 
