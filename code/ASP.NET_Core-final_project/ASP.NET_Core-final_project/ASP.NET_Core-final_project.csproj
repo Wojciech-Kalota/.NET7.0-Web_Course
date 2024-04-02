@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
+    <PackageReference Include="microsoft.entityframeworkcore" Version="7.0.1" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlite" Version="7.0.1" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <AssemblyName>ASP.NET_Core-final_project</AssemblyName>
+    <RootNamespace>ASP.NET_Core-final_project</RootNamespace>
+  </PropertyGroup>
+
+
+</Project>
