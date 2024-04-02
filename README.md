@@ -1,5 +1,5 @@
 <h1>Description:</h1>
-<p>This is a Full-stack web development course for .NET 5.0 that I put together based on the resources available online for a study group I led about one year ago.</p>
+<p>This is a Full-stack web development course for .NET 6.0 that I put together based on the resources available online for a study group I led about one year ago.</p>
 <p>The purpose of this course is to structure the learning process so that you learn things in order and have all the knowledge necessary to follow to the next step.</p>
 <p>This course can be seperated into two overlapping sub-courses: one for Frontend and one for Backend.</p>
 <p>The full course is divided into 4 sub-sections:</p>
@@ -212,6 +212,18 @@ struct MacAddress
 
 <h3>What is ASP.NET Core</h3>
 <p>ASP.NET Core is a framework for building web applications that utilizes C# and other .NET tools. It provides us with all the necessary tools and structure to easily build our own server-side application.</p>
+
+<h3>Coding</h3>
+<p>With that out of the way now we are ready to start coding. As before, please follow the tutorial Ervis Trupja made while also looking at the notes I will list below.</p>
+<p>Link to the tutorial</p>
+<p><a href="https://www.youtube.com/playlist?list=PL2Q8rFbm-4ru6hExDbfrN3QZNKI7n3p0N">https://www.youtube.com/playlist?list=PL2Q8rFbm-4ru6hExDbfrN3QZNKI7n3p0N</a></p>
+
+<h3>Notes</h3>
+<h4>02.</h4>
+<p>Skip it, you already have everything installed</p>
+
+<h4>03.</h4>
+<p>Sellect .NET6.0 or newer and skip everything after 2:10</p>
 
 <h3>More coming to github soon</h3>
 
