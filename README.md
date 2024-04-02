@@ -1,6 +1,8 @@
 <h1>Description:</h1>
 <p>This is a Full-stack web development course for .NET 7.0 that I put together based on the resources available online for a study group I led about one year ago. Now publicly available and fully translated to English.</p>
 <p>The purpose of this course is to structure the learning process so that you learn things in order and have all the knowledge necessary to follow to the next step.</p>
+<p>While following the tutorials please have fun with the code and experiment with new tools instead of just watching or copying the code. It's vital for learning and understanding.</p>
+<p>By the end of this course you should be fully equipt to create your own first project.</p>
 <p>This course can be seperated into two overlapping sub-courses: one for Frontend and one for Backend.</p>
 <h4>The full course is divided into 4 sub-sections:</h4>
 
@@ -352,15 +354,15 @@ After that, refresh the database by entering <code>update-database</code> in the
 
 <p>You are now done with the theory for Backend course. All that's left for you to do now is a one final project to test your skills in practice</p>
 
-<h3>Final Project</h3>
-Write a program using the newest version of .NET (without creating a startup.cs file) that:
-- will use SQLite
-- will have two tables in the database: "Languages" and "Programmers"
-- Languages ​​has fields: ID, Name, Programmers
-- Programmers has fields: ID, FullName, JoinDate(date added), LeaveDate(optional), Languages
-- then add a mana-to-many relationship between the previous two arrays
-- create the following endpoints (the names may differ slightly):
-- for Languages:
+<h2>Final Project</h2>
+<p>Write a program using the newest version of .NET (without creating a startup.cs file) that:</p>
+<p>- will use SQLite</p>
+<p>- will have two tables in the database: "Languages" and "Programmers"</p>
+<p>- Languages ​​has fields: ID, Name, Programmers</p>
+<p>- Programmers has fields: ID, FullName, JoinDate(date added), LeaveDate(optional), Languages</p>
+<p>- then add a mana-to-many relationship between the previous two arrays</p>
+<p>- create the following endpoints (the names may differ slightly):</p>
+<p>- for Languages:</p>
 <pre><code>
 DELETE /api/languages/{id}
 POST /api/languages
@@ -368,7 +370,7 @@ GET /api/languages
 PUT /api/languages/{id}
 GET /api/languages/{id}/programmers
 </code></pre>
-- for Programmers:
+<p>- for Programmers:</p>
 <pre><code>
 DELETE /api/programmers/{id}
 POST /api/programmers
@@ -377,16 +379,13 @@ PUT /api/programmers/{id}
 GET /api/programmers/{id}/languages
 </code></pre>
 
-<!--
+
 <p>- finally, add yourself to the database in the Programmers table and the appropriate programming languages ​​that match you in the Languages ​​table, as well as one other person (can be made up) whose at least one language will overlap with yours</p>
 
 <h4>After you are done with your project, or if you get really stuck you can compare your code to mine</h4>
-<p><a href="#ASP_Project"></p>
-//-->
-
-
-<h3>More coming to github soon</h3>
+<p><a href="/code/ASP.NET_Core-final_project/">My code</a></p>
 <hr>
+
 
 <h1 id="BLAZOR">Blazor</h1>
 <h3>Coming to github soon</h3>
