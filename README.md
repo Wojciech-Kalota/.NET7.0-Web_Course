@@ -1,5 +1,5 @@
 <h1>Description:</h1>
-<p>This is a Full-stack web development course for .Net 5.0 that I put together based on the resources available online for a study group I led about one year ago.</p>
+<p>This is a Full-stack web development course for .NET 5.0 that I put together based on the resources available online for a study group I led about one year ago.</p>
 <p>The purpose of this course is to structure the learning process so that you learn things in order and have all the knowledge necessary to follow to the next step.</p>
 <p>This course can be seperated into two overlapping sub-courses: one for Frontend and one for Backend.</p>
 <p>The full course is divided into 4 sub-sections:</p>
@@ -25,7 +25,7 @@
 
 <br/>
 
-<p>Disclaimer: I cannot guarantee that prepared materials will be available in the future nor that they will work on the newer releases of .Net, as I included the work of independent creators to which I have no affiliation. On this note, I would also like to credit them for their amazing work. They are doing the heavy lifting here, and I encourage you to check out their media for more useful content.</p>
+<p>Disclaimer: I cannot guarantee that prepared materials will be available in the future nor that they will work on the newer releases of .NET, as I included the work of independent creators to which I have no affiliation. On this note, I would also like to credit them for their amazing work. They are doing the heavy lifting here, and I encourage you to check out their media for more useful content.</p>
 
 <h2>Sub-courses:</h2>
 <h3>Backend:</h3>
