@@ -1,8 +1,8 @@
 <h1>Description:</h1>
-<p>This is a Full-stack web development course for .NET 6.0 that I put together based on the resources available online for a study group I led about one year ago.</p>
+<p>This is a Full-stack web development course for .NET 7.0 that I put together based on the resources available online for a study group I led about one year ago. Now publicly available and fully translated to English.</p>
 <p>The purpose of this course is to structure the learning process so that you learn things in order and have all the knowledge necessary to follow to the next step.</p>
 <p>This course can be seperated into two overlapping sub-courses: one for Frontend and one for Backend.</p>
-<p>The full course is divided into 4 sub-sections:</p>
+<h4>The full course is divided into 4 sub-sections:</h4>
 
 <ul>
   <li><a href="#C">C#</a></li>
@@ -11,19 +11,20 @@
   <li><a href="#BLAZOR">Blazor</a></li>
 </ul>
 
-<br/>
+<br>
 
-<p>Other technologies used/for you to explore:</p>
+<h4>Other technologies used/for you to explore:</h4>
 <ul>
   <li>SQLite</li>
   <li>Git</li>
   <li>EF Core</li>
   <li>Xunit</li>
   <li>Mediatr</li>
+  <li>MudBlazor</li>
   <li>Visual Studio 2022</li>
 </ul>
 
-<br/>
+<br>
 
 <p>Disclaimer: I cannot guarantee that prepared materials will be available in the future nor that they will work on the newer releases of .NET, as I included the work of independent creators to which I have no affiliation. On this note, I would also like to credit them for their amazing work. They are doing the heavy lifting here, and I encourage you to check out their media for more useful content.</p>
 
@@ -39,7 +40,7 @@
   <li><a href="#HTML&CSS">HTML & CSS</a></li>
   <li><a href="#BLAZOR">Blazor</a></li>
 </ul>
-<br/>
+<br>
 
 
 
@@ -67,11 +68,12 @@
 <img src="/images/4.png">
 
 <h3>Coding</h3>
-<p>Now we are ready to start coding. For that please follow the tutorial Bro Code made while also looking at the notes I will list below.</p>
+<p>Now we are ready to start coding. For that please follow the tutorial Bro Code made (big thanks) while also looking at the notes I will list below.</p>
 <p>Link to the tutorial</p>
 <p><a href="https://www.youtube.com/watch?v=r3CExhZgZV8&list=PLZPZq0r_RZOPNy28FDBys3GVP2LiaIyP_">https://www.youtube.com/watch?v=r3CExhZgZV8&list=PLZPZq0r_RZOPNy28FDBys3GVP2LiaIyP_</a></p>
 
 <h3>Notes</h3>
+<hr>
 <p>Use <code>string</code> instead of <code>String</code></p>
 
 <h4>Episode 5: Type casting</h4>
@@ -94,10 +96,11 @@ int number2 = int.Parse(input);
 // TryParse - returns true if the given text is a number and returns false otherwise. Number is stored in "out" variable.
 // Parse - returns a number if conversion is possibly. Otherwise throwns an exception.
 </code></pre>
-<p>If the code above is unclear you can come back here after finishing all the videos</p>
+<p>If the code above is unclear you can come back here after finishing all the videos.</p>
 
 <h4>Episode 23: C# methods</h4>
-<p>For naming methods use <code>PascalCase</code> instead of <code>camelCase</code></p>
+<p>For naming methods use <code>PascalCase</code> instead of <code>camelCase</code>.</p>
+<hr>
 
 <h4>Bonus literature after watching all the videos. I would highly encourage you to read/watch the following to at least familiarize yourself with the tools at your disposal.</h4>
 <p>Asynchronous programming (important!)</p>
@@ -214,18 +217,176 @@ struct MacAddress
 <p>ASP.NET Core is a framework for building web applications that utilizes C# and other .NET tools. It provides us with all the necessary tools and structure to easily build our own server-side application.</p>
 
 <h3>Coding</h3>
-<p>With that out of the way now we are ready to start coding. As before, please follow the tutorial Ervis Trupja made while also looking at the notes I will list below.</p>
+<p>With that out of the way now we are ready to start coding. As before, please follow the tutorial Ervis Trupja made (big thanks) while also looking at the notes I will list below.</p>
 <p>Link to the tutorial</p>
 <p><a href="https://www.youtube.com/playlist?list=PL2Q8rFbm-4ru6hExDbfrN3QZNKI7n3p0N">https://www.youtube.com/playlist?list=PL2Q8rFbm-4ru6hExDbfrN3QZNKI7n3p0N</a></p>
 
 <h3>Notes</h3>
-<h4>02.</h4>
-<p>Skip it, you already have everything installed</p>
+<hr>
+<h4>02. (Instalation)</h4>
+<p>- Skip it, you already have everything installed</p>
 
-<h4>03.</h4>
-<p>Sellect .NET6.0 or newer and skip everything after 2:10</p>
+<h4>03. (New project)</h4>
+<p>- Sellect .NET 7.0 or newer and skip everything after 2:10</p>
+<br>
+<p>- To be able to follow the tutorial, which is in an older version, please paste the following as the program.cs</p>
+<pre><code>
+using Microsoft.AspNetCore.Hosting;
+using System.Data.Common;
+using <Project name>;
+var builder = Host.CreateDefaultBuilder(args)
+    .ConfigureWebHostDefaults(webBuilder =>
+    {
+        webBuilder.UseStartup<Startup>();
+    });
+
+builder.Build().Run();
+</code></pre>
+
+<p>- After that create a Startup.cs file and paste in the following:</p>
+<pre><code>
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using System.Runtime;
+using <Project name>.Data;
+using <Project name>.Data.Services;
+namespace <Project name>;
+
+public class Startup
+{
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
+
+    public IConfiguration Configuration { get; }
+
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+
+
+        // Add services to the container.
+
+        services.AddControllers();
+
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen();
+
+    }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        if (env.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+
+        app.UseAuthorization();
+
+        app.UseRouting();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
+    }
+}
+</code></pre>
+
+<p>Now it's important to note that we will be working on SQLite, as it provides free and lightweight experience while in the video tutorial MS SQL is the database of choice (which will be talked about all the time, so don't get confused)
+Therefore, if you want to view your SQLite table in graphical form, install the following software:</p>
+<p><a href="https://dbeaver.io/download/">https://dbeaver.io/download/</a></p>
+<p>Then after creating your database (which we will be doing later) select that your Database is SQLite, provide the path to the file and, if necessary, install the additional files that will be suggested to you.
+To view the data, select the table and then click the Data button or the ER Diagram button to view the relationships
+When following tutorials, we always skip server explorer because we work on a different database, if you want to browse your database, use the linked software.</p>
+<img id="ER" src="/images/5.png">
+
+<h4>09. (DbContext)</h4>
+<p>- (7:00) change <code>options.UseSqlServer(ConnectionString)</code> to <code>options.UseSqlite(ConnectionString)</code>
+<p>- (7:45) change <code>Install-Package Microsoft.EntityFrameworkCore.SqlServer</code> to <code>Install-Package Microsoft.EntityFrameworkCore.Sqlite</code>
+
+<h4>10. (Migration)</h4>
+<p>- skip server explorer 1:30 - 2:30</p>
+<p>- instead of that connection string <code>"Data Source=ETR"...</code> use <code>Data Source={}</code> and replace <code>{}</code> with the name of the (new) database file (e.g. test.db)</p>
+<p>- the InitialDatabaseMigration class will be a little different, but it shouldn't have an inpact on this tutorial</p>
+<p>- skip server explorer from 5:17</p>
+
+<h4>11. (Seeding)</h4>
+<p>- skip server explorer from 8:00</p>
+<p>- this is not how you should seed a database, but still a good example of adding data to the db</p>
+
+<h4>19. (One-to-Many)</h4>
+<p>- skip server explorer from 6:00</p>
+
+<h4>20. (Many-to-Many)</h4>
+<p>- set navigation properties (<code>PublisherId</code> and <code>Publisher</code>) as optional (put a question mark after the type [<code>int? PublisherId</code> and <code>Publisher? Publisher</code>])</p>
+<p>- skip server explorer 10:40 - 11:25</p>
+<p>- if you want to make sure that you have the same relationships as in 11:30, go to the previously installed database software, select table for which you want to check the relationships and click the <a href="#ER">ER Diagram button</a></p>
+
+<h4>21. (Adding Services)</h4>
+<p>- skip server explorer from 13:10</p>
+
+<h4>22. (Adding Relational Data)</h4>
+<p>- skip server explorer 6:10 - 6:20 and from 9:00</p>
+
+<h4>26. (Deleting Relational Data)</h4>
+<p>- skip server explorer 3:53 - 4:25, 6:45 - 7:25, 7:50 - 8:30, 9:20 - 9:30, 9:50 - 10:10, 10:35+</p>
+<p>- add new model Builder in AppDbContext:</p>
+<pre><code>
+modelBuilder.Entity<Book>()
+  .HasOne(book => book.Publisher)
+  .WithMany(pub => pub.Books)
+  .HasForeignKey(book => book.PublisherId)
+  .OnDelete(DeleteBehavior.Cascade);
+</code></pre>
+<p>- now build a new migration by entering <code>add-migration <name> in the Package Manager Console</code>.
+After that, refresh the database by entering <code>update-database</code> in the same place</p>
+<hr>
+
+<p>You are now done with the theory for Backend course. All that's left for you to do now is a one final project to test your skills in practice</p>
+
+<h3>Final Project</h3>
+Write a program using the newest version of .NET (without creating a startup.cs file) that:
+- will use SQLite
+- will have two tables in the database: "Languages" and "Programmers"
+- Languages ​​has fields: ID, Name, Programmers
+- Programmers has fields: ID, FullName, JoinDate(date added), LeaveDate(optional), Languages
+- then add a mana-to-many relationship between the previous two arrays
+- create the following endpoints (the names may differ slightly):
+- for Languages:
+<pre><code>
+DELETE /api/languages/{id}
+POST /api/languages
+GET /api/languages
+PUT /api/languages/{id}
+GET /api/languages/{id}/programmers
+</code></pre>
+- for Programmers:
+<pre><code>
+DELETE /api/programmers/{id}
+POST /api/programmers
+GET /api/programmers
+PUT /api/programmers/{id}
+GET /api/programmers/{id}/languages
+</code></pre>
+
+<!--
+<p>- finally, add yourself to the database in the Programmers table and the appropriate programming languages ​​that match you in the Languages ​​table, as well as one other person (can be made up) whose at least one language will overlap with yours</p>
+
+<h4>After you are done with your project, or if you get really stuck you can compare your code to mine</h4>
+<p><a href="#ASP_Project"></p>
+//-->
+
 
 <h3>More coming to github soon</h3>
+<hr>
 
 <h1 id="BLAZOR">Blazor</h1>
 <h3>Coming to github soon</h3>
