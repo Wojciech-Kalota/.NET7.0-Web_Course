@@ -111,9 +111,11 @@ int number2 = int.Parse(input);
 <p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/delegates-overview">https://learn.microsoft.com/en-us/dotnet/csharp/delegates-overview</a></p>
 <p>Lambda expressions</p>
 <p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions</a></p>
+<p>Access modifiers</p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers</a></p>
 <p>out</p>
 <p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters#out-parameter-modifier">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters#out-parameter-modifier</a></p>
-<p>IEnumerable<T></p>
+<p>IEnumerable&lt;T&gt;</p>
 <p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-7.0">https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-7.0</a></p>
 <p>LINQ<T></p>
 <pre><code>
@@ -226,12 +228,12 @@ struct MacAddress
 <h3>Notes</h3>
 <hr>
 <h4>02. (Instalation)</h4>
-<p>- Skip it, you already have everything installed</p>
+<p>- skip it, you already have everything installed</p>
 
 <h4>03. (New project)</h4>
-<p>- Sellect .NET 7.0 or newer and skip everything after 2:10</p>
+<p>- sellect .NET 7.0 or newer and skip everything after 2:10</p>
 <br>
-<p>- To be able to follow the tutorial, which is in an older version, please paste the following as the program.cs</p>
+<p>- to be able to follow the tutorial, which is in an older version, please paste the following as the program.cs</p>
 <pre><code>
 using Microsoft.AspNetCore.Hosting;
 using System.Data.Common;
@@ -245,7 +247,7 @@ var builder = Host.CreateDefaultBuilder(args)
 builder.Build().Run();
 </code></pre>
 
-<p>- After that create a Startup.cs file and paste in the following:</p>
+<p>- after that create a Startup.cs file and paste in the following:</p>
 <pre><code>
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -351,6 +353,16 @@ modelBuilder.Entity<Book>()
 <p>- now build a new migration by entering <code>add-migration <name> in the Package Manager Console</code>.
 After that, refresh the database by entering <code>update-database</code> in the same place</p>
 <hr>
+
+<h4>Bonus literature after watching all the videos. I would highly encourage you to read/watch the following to at least familiarize yourself with the tools at your disposal.</h4>
+<p>Logger<T></p>
+<p><a href="https://www.youtube.com/watch?v=NN9Rmf0PUG4&t=6s">https://www.youtube.com/watch?v=NN9Rmf0PUG4&t=6s</a></p>
+<p>Status codes</p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes?view=aspnetcore-8.0">https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes?view=aspnetcore-8.0</a></p>
+<p>Headers</p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httpheaders.add?view=net-8.0">https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httpheaders.add?view=net-8.0</a></p>
+<p>Authorization</p>
+<p><a href="https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction?view=aspnetcore-8.0">https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction?view=aspnetcore-8.0</a></p>
 
 <p>You are now done with the theory for Backend course. All that's left for you to do now is a one final project to test your skills in practice</p>
 
