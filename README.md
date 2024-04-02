@@ -5,10 +5,10 @@
 <p>The full course is divided into 4 sub-sections:</p>
 
 <ul>
-  <li><a href="#C">C#</li>
-  <li><a href="#HTML&CSS">HTML & CSS</li>
-  <li><a href="#CORE">ASP.NET Core</li>
-  <li><a href="#BLAZOR">Blazor</li>
+  <li><a href="#C">C#</a></li>
+  <li><a href="#HTML&CSS">HTML & CSS</a></li>
+  <li><a href="#CORE">ASP.NET Core</a></li>
+  <li><a href="#BLAZOR">Blazor</a></li>
 </ul>
 
 <br/>
@@ -30,14 +30,14 @@
 <h2>Sub-courses:</h2>
 <h3>Backend:</h3>
 <ul>
-  <li><a href="#C">C#</li>
-  <li><a href="#CORE">ASP.NET Core</li>
+  <li><a href="#C">C#</a></li>
+  <li><a href="#CORE">ASP.NET Core</a></li>
 </ul>
 <h3>Frontend:</h3>
 <ul>
-  <li><a href="#C">C#</li>
-  <li><a href="#HTML&CSS">HTML & CSS</li>
-  <li><a href="#BLAZOR">Blazor</li>
+  <li><a href="#C">C#</a></li>
+  <li><a href="#HTML&CSS">HTML & CSS</a></li>
+  <li><a href="#BLAZOR">Blazor</a></li>
 </ul>
 <br/>
 
@@ -203,7 +203,17 @@ struct MacAddress
 <h3>Coming to github soon</h3>
 
 <h1 id="CORE">ASP.NET Core</h1>
-<h3>Coming to github soon</h3>
+<h3>Entry requirements</h3>
+<ul>
+  <li><a href="#C">C#</a></li>
+</ul>
+
+<p>Now, you are ready to learn how to apply your knowledge in practice. In this part of the course, we will focus on the Backend, which is a term used for the widely understood technical background of any application. Here in the server, all the stuff happens behind closed doors so that later Frontend (client) can display it to the user.</p>
+
+<h3>What is ASP.NET Core</h3>
+<p>ASP.NET Core is a framework for building web applications that utilizes C# and other .NET tools. It provides us with all the necessary tools and structure to easily build our own server-side application.</p>
+
+<h3>More coming to github soon</h3>
 
 <h1 id="BLAZOR">Blazor</h1>
 <h3>Coming to github soon</h3>
